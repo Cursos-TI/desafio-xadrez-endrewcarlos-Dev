@@ -2,39 +2,47 @@
 
      int main (){
         
-        int i = 1;
-
-        printf("\n###### Bem-vindo ao Jogo Movimento Peças de Xadrez ######\n");
+        int movimento = 0, torre = 0, rainha = 0, bispo = 0;
 
         //Movimento do Bispo com o while
-        while (i < 5)
-        {  
-            printf("\nMovimento do Bispo\n");
-            printf("Pra Cima, direita\n");
-            printf("Pra Cima, esquerda\n");
-            i++;
+        printf("\nMovimento do Bispo\n");
+        while (bispo < 5){  
+            printf("Cima, direita\n");
+            bispo++;
         }
         
         //Movimento da Rainha com o do-while
-        do
-        {
-           printf("\nMovimento da Rainha\n");
-           printf("Pra Direita\n");
-           printf("Pra Esquerda\n");
-           printf("Pra Cima\n");
-           printf("Pra Baixo\n");
-           printf("Pra cima, direita\n");
-           printf("Pra cima, esquerda\n");
-           i++;
-        } while (i < 8);
+        printf("\nMovimento do Rainha\n");
+        do{
+           printf("Esquerda\n");
+           rainha++;
+        } while (rainha < 8);
         
         //Movimento da Torre com o for
-        for (int i = 0; i < 5; i++)
+        printf("\nMovimento do torre\n");
+        for (torre = 0; torre < 5; torre++)
         {
-            printf("\nMovimento da Torre\n");
             printf("Direita\n");
+        }
+
+        //Movimento do Cavalo com loops Aninhados
+        printf("\nMovimento do Cavalo\n");
+        while (movimento < 2)
+        {
+            for (int cavalo = 0; cavalo < 1; cavalo++)
+            {
+                printf("Baixo\n");
+            } 
+            
+            movimento++;
+        }
+        
+        for (movimento = 0; movimento < 1; movimento++)
+        {
             printf("Esquerda\n");
         }
+        
+        
         
         return 0;
      }
