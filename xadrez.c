@@ -1,48 +1,69 @@
 #include <stdio.h>
 
-     int main (){
+    //Movimento do Bispo com o while Loops Aninhados
+    void bispo( int movimentodobispo){
+        while (movimentodobispo){  
+        printf("Direita\n");
+        movimentodobispo++;
+    }
         
-        int movimento = 0, torre = 0, rainha = 0, bispo = 0;
-
-        //Movimento do Bispo com o while
-        printf("\nMovimento do Bispo\n");
-        while (bispo < 5){  
-            printf("Cima, direita\n");
-            bispo++;
+        for (int movimento2 = 1; movimento2 = 1; movimento2++)
+        {
+            printf("Cima\n");
+            break;
         }
-        
-        //Movimento da Rainha com o do-while
-        printf("\nMovimento do Rainha\n");
+    }
+
+    //Movimento da Torre com o for função Recursiva
+    void torre(int movimentodatorre){
+    for (movimentodatorre = 0; movimentodatorre - 5; movimentodatorre++)
+    {
+        printf("Direita\n");
+    }
+    }
+    
+    //Movimento da Rainha com o do-While função Recursiva
+    void rainha(int movimentodarainha){
         do{
-           printf("Esquerda\n");
-           rainha++;
-        } while (rainha < 8);
-        
-        //Movimento da Torre com o for
-        printf("\nMovimento do torre\n");
-        for (torre = 0; torre < 5; torre++)
-        {
-            printf("Direita\n");
-        }
-
-        //Movimento do Cavalo com loops Aninhados
-        printf("\nMovimento do Cavalo\n");
-        while (movimento < 2)
-        {
-            for (int cavalo = 0; cavalo < 1; cavalo++)
+        printf("Esquerda\n");
+        movimentodarainha++;
+         } while (movimentodarainha);
+    }
+ 
+    //Movimento do Cavalo com for loops Aninhados
+    void cavalo(int movimentodocavalo){
+        for (movimentodocavalo = 0; movimentodocavalo - 2; movimentodocavalo++)
             {
-                printf("Baixo\n");
-            } 
+                printf("Cima\n");
+                continue;
+                movimentodocavalo++;}
+            {
+                {for (int movimento2 = 1; movimento2 = 1; movimento2++)
+                break;
+                printf("Direita\n");
+            }
             
-            movimento++;
         }
-        
-        for (movimento = 0; movimento < 1; movimento++)
-        {
-            printf("Esquerda\n");
-        }
-        
-        
-        
-        return 0;
-     }
+    }
+
+    int main() {
+    
+        int movimentodobispo;
+        printf("\nMovimento do Bispo\n");
+        bispo(movimentodobispo - 5);
+
+        int movimentodatorre;
+        printf("\nMovimento da Torre\n");
+        torre(movimentodatorre - 5);
+
+        int movimentodarainha;
+        printf("\nMovimento da Rainha\n");
+        rainha(movimentodarainha - 8);
+
+        int movimentodocavalo;
+        printf("\nMovimento do Cavalo\n");
+        cavalo(movimentodocavalo - 2);
+    
+    
+    return 0;
+}
